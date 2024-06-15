@@ -1,6 +1,8 @@
 # uCertify Hero
 
-uCertify Hero is a Tampermonkey script designed to automate answering questions on the uCertify platform. It scrapes questions from uCertify, performs online searches, and uses ChatGPT 4.0 to generate accurate answers.
+*[English](README.md) ∙ [简体中文](README.zh-CN.md) ∙ [繁體中文](README.zh-TW.md)*
+
+uCertify Hero is a Tampermonkey script designed to automate answering questions on the uCertify platform. It scrapes questions from uCertify, performs online searches, and uses ChatGPT 4o to generate accurate answers.
 
 ## Features
 
@@ -26,6 +28,12 @@ uCertify Hero is a Tampermonkey script designed to automate answering questions 
 2. Select "Dashboard."
 3. Click on the uCertify Hero script.
 4. Use the "Set API Keys" menu option to input your OpenAI API key.
+
+## Support
+
+If you find this project helpful, consider supporting me:
+
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/5TFG4)
 
 ## License
 
