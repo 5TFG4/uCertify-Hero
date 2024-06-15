@@ -6,7 +6,7 @@ uCertify Hero is a Tampermonkey script designed to automate answering questions 
 
 - Automatically scrapes questions from uCertify.
 - Searches online for relevant information using DuckDuckGo.
-- Uses ChatGPT 4.0 to provide detailed answers.
+- Uses ChatGPT 4o to provide detailed answers.
 - Easy OpenAI API key setup through a user-friendly menu.
 
 ## Installation
