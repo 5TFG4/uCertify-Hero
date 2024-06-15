@@ -2,20 +2,20 @@
 
 *[English](README.md) ∙ [简体中文](README.zh-CN.md) ∙ [繁體中文](README.zh-TW.md)*
 
-uCertify Hero 是一个 Tampermonkey 脚本，旨在自动回答 uCertify 平台上的问题。它会从 uCertify 抓取问题，进行在线搜索，并使用 ChatGPT 4o 生成准确的答案。
+uCertify Hero 是一个 Tampermonkey 脚本，旨在自动回答 uCertify 平台上的问题。它会从 uCertify 抓取问题，进行在线搜索，并使用 ChatGPT 生成准确的答案。
 
 ## 功能特点
 
 - 自动抓取 uCertify 上的问题。
 - 使用 DuckDuckGo 搜索相关信息。
-- 使用 ChatGPT 4o 提供详细答案。
+- 使用 ChatGPT 提供详细答案。
 - 通过用户友好的菜单轻松设置 OpenAI API 密钥。
 
 ## 安装
 
 1. 安装 [Tampermonkey](https://www.tampermonkey.net/) 浏览器扩展。
 2. 从 [Greasy Fork](https://greasyfork.org/en/scripts/498022-ucertify-hero) 添加 uCertify Hero 脚本。
-3. 通过 Tampermonkey 菜单选项 “Set API Keys” 设置你的 OpenAI API 密钥。
+3. 通过 Tampermonkey 菜单选项 “Set API Keys and Model” 设置你的 OpenAI API 密钥。
 
 ## 使用方法
 
@@ -27,7 +27,7 @@ uCertify Hero 是一个 Tampermonkey 脚本，旨在自动回答 uCertify 平台
 1. 点击浏览器中的 Tampermonkey 图标。
 2. 选择 “Dashboard”。
 3. 点击 uCertify Hero 脚本。
-4. 使用 “Set API Keys” 菜单选项输入你的 OpenAI API 密钥。
+4. 使用 “Set API Keys and Model” 菜单选项输入你的 OpenAI API 密钥。
 
 ## 支持
 
