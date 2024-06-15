@@ -12,7 +12,7 @@ uCertify Hero is a Tampermonkey script designed to automate answering questions 
 ## Installation
 
 1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension.
-2. Add the uCertify Hero script from [Greasy Fork](https://greasyfork.org/).
+2. Add the uCertify Hero script from [Greasy Fork](https://greasyfork.org/en/scripts/498022-ucertify-hero).
 3. Set your OpenAI API key via the Tampermonkey menu option "Set API Keys."
 
 ## Usage
