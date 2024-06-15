@@ -1,5 +1,7 @@
 // ==UserScript==
 // @name         uCertify Hero
+// @name:zh-CN   uCertify Hero
+// @name:zh-TW   uCertify Hero
 // @namespace    http://tampermonkey.net/
 // @version      1.7
 // @description  Get answers for uCertify quiz questions
