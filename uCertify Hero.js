@@ -3,8 +3,10 @@
 // @name:zh-CN   uCertify Hero
 // @name:zh-TW   uCertify Hero
 // @namespace    http://tampermonkey.net/
-// @version      1.7
-// @description  Get answers for uCertify quiz questions
+// @version      1.9
+// @description  Automates answering questions on uCertify using online searches and ChatGPT 4o
+// @description:zh-CN 自动通过在线搜索和ChatGPT 4o回答uCertify上的问题
+// @description:zh-TW 自動通過線上搜尋和ChatGPT 4o回答uCertify上的問題
 // @author       TFG
 // @match        https://www.ucertify.com/app/*
 // @grant        GM_registerMenuCommand
