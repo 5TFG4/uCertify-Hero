@@ -165,6 +165,7 @@ SOFTWARE.
 
     // Function to get search suggestions from GPT
     async function getSearchSuggestions(title, question, options) {
+        const apiUrl = localStorage.getItem('openai_api_url');
         const apiKey = localStorage.getItem('openai_api_key');
         const apimodel = localStorage.getItem('openai_api_model');
 
@@ -178,7 +179,7 @@ SOFTWARE.
         console.log('Prompt for search suggestions:', prompt);
 
         try {
-            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -209,6 +210,7 @@ SOFTWARE.
 
     // Function to get answer from GPT with search results
     async function getChatGPTAnswerWithSearchResults(title, question, options, searchResults) {
+        const apiUrl = localStorage.getItem('openai_api_url');
         const apiKey = localStorage.getItem('openai_api_key');
         const apimodel = localStorage.getItem('openai_api_model');
 
@@ -222,7 +224,7 @@ SOFTWARE.
         console.log('Prompt for final answer:', prompt);
 
         try {
-            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -309,6 +311,7 @@ SOFTWARE.
 
    // Function to set API keys and model
     function setApiKeys() {
+        const savedApiUrl = localStorage.getItem('openai_api_url');
         const savedApiKey = localStorage.getItem('openai_api_key');
         const savedApiModel = localStorage.getItem('openai_api_model');
         const maskedApiKey = savedApiKey ? `${savedApiKey.slice(0, 3)}...${savedApiKey.slice(-4)}` : '';
@@ -318,6 +321,8 @@ SOFTWARE.
         formDiv.innerHTML = `
         <div id="api-key-model-form" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); z-index: 9999; width: 400px;">
             <h3>Set OpenAI API Key and Model</h3>
+            <label for="apiUrl">Enter your OpenAI API URL:</label><br>
+            <input type="text" id="apiUrl" style="width: 100%;" value="${savedApiUrl || 'https://api.openai.com/v1/chat/completions'}"><br><br>
             <label for="apiKey">Enter your OpenAI API key:</label><br>
             <input type="text" id="apiKey" style="width: 100%;" value="${maskedApiKey}"><br><br>
             <label for="apiModel">Select your API model:</label>
@@ -342,6 +347,7 @@ SOFTWARE.
 
         // Add event listener for the save button
         document.getElementById('saveApiKeyModel').addEventListener('click', function() {
+            const inputApiUrl = document.getElementById('apiUrl').value;
             const inputApiKey = document.getElementById('apiKey').value;
             const selectedModel = document.getElementById('apiModel').value;
 
@@ -352,6 +358,7 @@ SOFTWARE.
             }
 
             if (openaiApiKey && selectedModel) {
+                localStorage.setItem('openai_api_url', inputApiUrl);
                 localStorage.setItem('openai_api_key', openaiApiKey);
                 localStorage.setItem('openai_api_model', selectedModel);
                 document.body.removeChild(formDiv);
